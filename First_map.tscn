@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgealrjl1j47j"]
+[gd_scene load_steps=8 format=3 uid="uid://cgealrjl1j47j"]
 
 [ext_resource type="Texture2D" uid="uid://cdxp6tqlm3frn" path="res://assets/Maps/Magic Cliffs/tileset.png" id="1_0qhej"]
 [ext_resource type="Texture2D" uid="uid://bf7skutwlex5x" path="res://assets/Maps/tilemap sunny forest/tileset.png" id="1_4gunh"]
 [ext_resource type="PackedScene" uid="uid://dkdlaelemaafk" path="res://Player_2d.tscn" id="3_we6ok"]
+[ext_resource type="PackedScene" uid="uid://da5cd4fcxab6" path="res://enemy.tscn" id="4_dgl1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nqpi"]
 resource_name = "Magic Cliffs"
@@ -2057,3 +2058,9 @@ layer_0/tile_data = PackedInt32Array(1441803, 327680, 11, 1507339, 327680, 12, 1
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_we6ok")]
 position = Vector2(205, 279)
+
+[node name="RigidBody2D" parent="." groups=["Hit"] instance=ExtResource("4_dgl1r")]
+position = Vector2(476, 289)
+
+[editable path="CharacterBody2D"]
+[editable path="RigidBody2D"]
